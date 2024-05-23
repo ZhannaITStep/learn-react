@@ -7,20 +7,49 @@ import React, {useState} from "react";
 // 5. force rerender
 
 
-// Todo hook use rules
+// const someHeavyFunc = () => {
+//   console.log('HEAVY!')
+//   return new Array(9999).fill(2).map((val) => val ** Math.round(Math.random() * 1000))
+// };
 
-export const App = () => {
-  const [counter, setCounter] = useState(0)
+// export const Playstation = () => {
+//   const [counter, setCounter] = useState(0);
+//   const [arr, setArr] = useState(() => someHeavyFunc());
 
-  const inc = () => {
-    setCounter(counter + 1);
 
-// DO NOT DO THAT!!!
-// counter = ????
+//   const inc = () => {
+//       setCounter(ctr => ctr + 1); 
+//     // console.log(counter);
+//   };
 
-    console.log(counter);
+//   console.log('RENDER');
+
+//   return (
+//     <>
+//       <div>
+//         <h1>Sony Playstations:</h1>
+//         <p>{counter}</p>
+//         <button onClick={inc}>+</button>
+//         {/* <button onClick={inc}>-</button> */}
+//       </div>
+//     </>
+//   );
+// };
+
+
+
+export const Playstation = () => {
+  const [counter, setCounter] = useState(0);
+
+  const incUp = () => {
+      setCounter(ctr => ctr + 1); 
+    // console.log(counter);
   };
 
+  const incDown = () => {
+    if (counter) 
+      setCounter(counter - 1)
+  };
 
   console.log('RENDER');
 
@@ -29,7 +58,8 @@ export const App = () => {
       <div htmlFor="#ghbnjmk">
         <h1>Hello world!</h1>
         <p>{counter}</p>
-        <button onClick={inc}>+</button>
+        <button onClick={incUp}>+</button>
+        <button onClick={incDown}>-</button>
       </div>
     </>
   );

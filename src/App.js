@@ -1,30 +1,67 @@
-import React, { useState } from "react";
-import { Playstation } from "./Playstation";
-import { Eggs } from "./Eggs";
-import { Ground } from "./Ground";
+import React, {useState} from "react";
 
-// TODO input value two way binding
+
+
+
+// export const App = () => {
+//   const [inpValue, setInpValue] = useState(''); // inpValue - это листик препода
+
+//   const onInputChange = (event) => {
+//     // event.target.value то что нашептал сосед
+//     setInpValue(event.target.value); // передаем что нашептал сосед преподу
+//   };
+
+//   const clearInp = () => {
+//     setInpValue('')
+//   }  
+
+//   return (
+//     <div>
+//       <button onClick={clearInp}>clear</button>
+//       <input 
+//         value={inpValue} // препод передает листик что показывать (value - руки)
+//         type="text" 
+//         id='inp' 
+//         onChange={onInputChange}
+//       /> 
+//       <div>Your input is: {inpValue}</div>
+//     </div>
+//   );
+// };
 
 export const App = () => {
-  const [shouldShowText, setShouldShowText] = useState(false);
+  const [inpValue, setInpValue] = useState(''); 
+  const [shouldShowText, setShowText] = useState(true); 
 
-  const onChange = (e) => {
-    console.log(e.target.value);
+  const onInputChange = (event) => {
+    setInpValue(event.target.value); 
   };
 
-  const show = () => {
-    setShouldShowText((prevShowText) => !prevShowText);
-  };
+  const clearInp = () => {
+    setShowText(!shouldShowText)
+  }  
 
   return (
-    <>
-      <button onClick={show}>show</button>
-      {shouldShowText && <span>text</span>}
-      <input type="text" onChange={onChange} />
-      <Playstation />
-      <Eggs />
-      <Ground />
-    </>
+    <div>
+      <input 
+        value={inpValue} 
+        type="text" 
+        id='inp' 
+        onChange={onInputChange}
+      /> 
+      <button onClick={clearInp}>hide</button>
+      {shouldShowText && <>
+        <div>{inpValue}</div>
+            <select onChange={onInputChange} value={inpValue}>
+              <option value={'bmw'}>bmw</option>
+              <option value={'lada'}>lada</option>
+              <option value={'opel'}>opel</option>
+              <option value={'audi'}>audi</option>
+              <option value={'vw'}>vw</option>
+          </select>
+      </>}
+      <div>Your input is: {inpValue}</div>
+    </div>
   );
 };
 

@@ -17,21 +17,10 @@ export const App = () => {
         });
     }
 
-    // const deleteItem = (index) => {
-    //     const updatedItems = [...items];
-    //     updatedItems.splice(index, 1);
-    //     setItems(updatedItems);
-    //   };
-
     return <>
         <div>hello world!</div>
         {/* <CardItem name={name} age={age} phone={phone} /> */}
         { persons.map((person) => <CardItem {...person} key='person.id' />) }
-        {/* {items.map((person, index) => (
-        <div key={person.id}>
-          <CardItem {...person} />
-        </div>
-      ))} */}
     </>
 };
 

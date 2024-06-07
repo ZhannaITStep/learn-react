@@ -1,6 +1,6 @@
 export const data = [
   {
-    _id: "6661e453ef37d497e0c2cd9a",
+    id: "6661e453ef37d497e0c2cd9a",
     index: 0,
     picture: "http://placehold.it/32x32",
     age: 29,
@@ -12,7 +12,7 @@ export const data = [
     phone: "+1 (929) 477-3083",
   },
   {
-    _id: "6661e453cdfb1067c42cbff7",
+    id: "6661e453cdfb1067c42cbff7",
     index: 1,
     picture: "http://placehold.it/32x32",
     age: 37,
@@ -24,7 +24,7 @@ export const data = [
     phone: "+1 (916) 537-3479",
   },
   {
-    _id: "6661e4536b102dfebe7dd097",
+    id: "6661e4536b102dfebe7dd097",
     index: 2,
     picture: "http://placehold.it/32x32",
     age: 39,
@@ -36,7 +36,7 @@ export const data = [
     phone: "+1 (860) 451-3368",
   },
   {
-    _id: "6661e453f46b7545ee6a6358",
+    id: "6661e453f46b7545ee6a6358",
     index: 3,
     picture: "http://placehold.it/32x32",
     age: 25,
@@ -48,7 +48,7 @@ export const data = [
     phone: "+1 (914) 438-2088",
   },
   {
-    _id: "6661e453a91c54780355621e",
+    id: "6661e453a91c54780355621e",
     index: 4,
     picture: "http://placehold.it/32x32",
     age: 20,
@@ -60,7 +60,7 @@ export const data = [
     phone: "+1 (822) 413-2178",
   },
   {
-    _id: "6661e45359416a2b6e8f7bc0",
+    id: "6661e45359416a2b6e8f7bc0",
     index: 5,
     picture: "http://placehold.it/32x32",
     age: 29,
@@ -72,7 +72,7 @@ export const data = [
     phone: "+1 (920) 579-2232",
   },
   {
-    _id: "6661e453d3c274e552fb2c02",
+    id: "6661e453d3c274e552fb2c02",
     index: 6,
     picture: "http://placehold.it/32x32",
     age: 38,

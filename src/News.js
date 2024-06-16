@@ -1,16 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useFirstRender } from "./useFirstRender";
 
 export const News = () => {
-  const inputRef = useRef(null);
+    const [state, rerender] = useState({});
+    const isFirstRender = useFirstRender();
+   
 
-  useEffect(() => {}, [
-    inputRef.current.value
-  ])
 
-  return (
-    <di ref={inputRef} v>
-      <h1>NEWS!</h1>
-      <input type="text" id="text" />
-    </di>
-  );
+    const onClick = () => rerender({})
+
+    return (
+        <div>
+            <h1>NEWS!</h1>
+            {isFirstRender ? <div>MOUNT</div> : <div>UPDATE</div>}
+            <button onClick={onClick}>rerender</button>
+        </div>
+    );
 };
